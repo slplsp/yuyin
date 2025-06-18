@@ -89,34 +89,48 @@ python test2.py
 
 ## 👥 Team Members & Roles
 
-* **Surim Bong (Team Leader)**
+수림봉
 
-  * Project planning and progress management
-  * Final document and PPT writing
-  * VAE model building and scoring algorithm design
-  * Model training, backend API development
-  * Web integration and overall testing
-  * Demonstration video production
+* Project planning and progress management
+* Report and PPT writing
+* VAE model building and scoring algorithm design
+* Model training
+* Backend interface development
+* Web and model integration
+* Overall testing and connection of web end
+* Production of the demonstration video
 
-* **Gunhoon Song**
+송건훈
 
-  * Speech preprocessing and feature extraction (MFCC, formants, spectrogram)
-  * Assist in VAE model building
-  * Database design and score storage
-  * PPT writing, backend support
+* Speech preprocessing and feature extraction (MFCC, Formants, Spectrogram)
+* Assist in building VAE model
+* Provide assistance in backend interface development
+* PPT writing
+* Database design and score storage
+* Web and model integration
+* Cooperate with backend interface development
 
-* **Yehyung Ho**
+호예형
 
-  * Korean speech transcription module development
-  * Frontend page design and function implementation
-  * Visualization of scores and suggestions
-  * Web integration, project publishing, presentation script writing
+* Korean speech transcription module development
+* Provide assistance in Web and model integration
+* Frontend page design and function implementation
+* Visualization display of scoring results and suggestions
+* Assist with web and model integration
+* Project published
+* presentation script
+* Provided support in producing the demonstration video
+* Report writing
 
-* **Gunbang Jung**
+정건방
 
-  * Scoring suggestion and improvement module development
-  * Frontend optimization and visualization module development
-  * Web integration, overall testing, support for midterm PPT and model training
+* Scoring suggestion output and improvement module development
+* Frontend page optimization
+* develop visualization module
+* Assist with web and model integration
+* Overall testing
+* Provided support in producing the midterm PPT and Model training
+* Web translation
 
 ---
 
