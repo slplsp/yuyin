@@ -144,5 +144,5 @@ python test2.py
 
 ## 📧 Contact
 
-For inquiries, please contact the project lead at [suilinxpeng15@gmail.com](mailto:suilinxpeng15@gmail.com).
+For inquiries, please contact the project lead at [suilinxpeng15@gmail.com](mailto:suilinpeng15@gmail.com).
 
