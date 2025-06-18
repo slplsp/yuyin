@@ -1,37 +1,37 @@
-# 发音评估系统
+# Pronunciation Evaluation System
 
-## 项目简介
+## 📌 Project Overview
 
-本项目是一个基于深度学习的韩语发音评估系统，支持音频上传、发音评分、可视化对齐以及 AI 改进建议。该系统集成了声纹比对、DTW 动态时间规整、TTS 语音合成和 Flask Web 服务。
+This project is a deep learning-based Korean pronunciation evaluation system that supports audio upload, pronunciation scoring, DTW-based alignment visualization, and AI-based pronunciation improvement suggestions. The speech dataset is from Kaggle: [Korean Single Speaker Speech Dataset](https://www.kaggle.com/datasets/bryanpark/korean-single-speaker-speech-dataset).
 
 ---
 
-## 文件结构
+## 📂 File Structure
 
 ```
 .
-├── app.py              # Web 服务主程序（Flask）
-├── train.py            # 声纹模型训练脚本
-├── inference.py        # 发音评分与对齐可视化
-├── inference1.py       # 发音评分 + AI 改进建议（新版API）
-├── test.py             # 文本批量转 TTS
-├── test1.py            # OpenAI GPT API 测试脚本
-├── test2.py            # 音频格式转换（m4a -> wav）
-├── TTS1.py             # 使用 XTTS 生成韩语音频
-├── dataset.py          # 三元组音频数据集定义
-├── model.py            # 声纹编码模型定义
-├── wav2mel.py          # 梅尔频谱提取工具
-├── static/             # 前端静态文件（HTML、JS、CSS）
-├── uploads/            # 上传音频临时存放目录
-├── output_audio/       # TTS 音频输出目录
-├── audio_history/      # 评测历史音频保存目录
-├── cache/              # 临时缓存录音文件
-└── history.json        # 评测历史记录文件
+├── app.py              # Web service main (Flask)
+├── train.py            # Model training script
+├── inference.py        # Pronunciation evaluation and visualization
+├── inference1.py       # Pronunciation evaluation with AI feedback
+├── test.py             # Batch TTS generation using gTTS
+├── test1.py            # OpenAI GPT API test
+├── test2.py            # Audio format conversion (m4a → wav)
+├── TTS1.py             # TTS generation using XTTS
+├── dataset.py          # Triplet dataset class
+├── model.py            # Voice encoder model definition
+├── wav2mel.py          # Mel spectrogram extraction module
+├── static/             # Frontend files (HTML, CSS, JS)
+├── uploads/            # Temporary upload directory
+├── output_audio/       # TTS output directory
+├── audio_history/      # Audio history for evaluations
+├── cache/              # Temporary cache directory
+└── history.json        # Evaluation history file
 ```
 
 ---
 
-## 安装依赖
+## ⚙️ Installation
 
 ```bash
 pip install torch librosa gTTS moviepy flask tenacity fastdtw matplotlib scikit-learn TTS openai tqdm soundfile
@@ -39,47 +39,47 @@ pip install torch librosa gTTS moviepy flask tenacity fastdtw matplotlib scikit-
 
 ---
 
-## 使用说明
+## 🚀 How to Run
 
-### 启动 Web 服务
+### Start Web Service
 
 ```bash
 python app.py
 ```
 
-访问浏览器：[http://127.0.0.1:5001/](http://127.0.0.1:5001/)
+Open browser: [http://127.0.0.1:5001/](http://127.0.0.1:5001/)
 
-### 训练模型
+### Train Model
 
 ```bash
 python train.py
 ```
 
-输出：
+Outputs:
 
-* `voice_encoder_best.pth`（最优模型）
-* `Cosine Similarity.png`、`t-SNE.png`（可视化）
+* `voice_encoder_best.pth` (best model)
+* `Cosine Similarity.png`, `t-SNE.png` (visualizations)
 
-### 命令行发音评估
+### Command-line Pronunciation Evaluation
 
 ```bash
 python inference.py
 ```
 
-或
+or
 
 ```bash
 python inference1.py
 ```
 
-### 文本转语音
+### Generate TTS
 
 ```bash
 python TTS1.py
 python test.py
 ```
 
-### 音频格式转换
+### Convert Audio Format
 
 ```bash
 python test2.py
@@ -87,14 +87,48 @@ python test2.py
 
 ---
 
-## 注意事项
+## 👥 Team Members & Roles
 
-* 推荐音频文件为 16kHz 单声道 WAV 格式。
-* 配置 OpenAI API KEY 以获取改进建议。
-* 请准备 `data/kss/1/` 参考音频文件和相应测试音频。
+* **Surim Bong (Team Leader)**
+
+  * Project planning and progress management
+  * Final document and PPT writing
+  * VAE model building and scoring algorithm design
+  * Model training, backend API development
+  * Web integration and overall testing
+  * Demonstration video production
+
+* **Gunhoon Song**
+
+  * Speech preprocessing and feature extraction (MFCC, formants, spectrogram)
+  * Assist in VAE model building
+  * Database design and score storage
+  * PPT writing, backend support
+
+* **Yehyung Ho**
+
+  * Korean speech transcription module development
+  * Frontend page design and function implementation
+  * Visualization of scores and suggestions
+  * Web integration, project publishing, presentation script writing
+
+* **Gunbang Jung**
+
+  * Scoring suggestion and improvement module development
+  * Frontend optimization and visualization module development
+  * Web integration, overall testing, support for midterm PPT and model training
 
 ---
 
-## 联系方式
+## 🔑 Notes
 
-如有问题请联系项目负责人。
+* Recommended audio format: 16kHz, mono-channel WAV.
+* Store your OpenAI API KEY securely (e.g., in a `.env` file).
+* Prepare reference audios in the `data/kss/1/` directory.
+
+---
+
+## 📧 Contact
+
+For inquiries, please contact the project lead at [suilinxpeng15@gmail.com](mailto:suilinxpeng15@gmail.com).
+
